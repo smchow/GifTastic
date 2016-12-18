@@ -66,7 +66,7 @@
               var newDiv = $("<div>");
               var p = $("<p>");
               p.html("Rating: " + response.data[i].rating);
-              var img = $("<img>").attr("src", response.data[i].images.fixed_height_still.url)
+              var img = $("<img>").attr("src", response.data[i].images.fixed_height_still.url).attr("data-still",response.data[i].images.fixed_height_still.url).attr("data-animate", response.data[i].images.fixed_height.url).attr("data-state", "still").addClass("gif");
                 //image_original_url)
               newDiv.append(p);
               newDiv.append(img);
@@ -116,6 +116,22 @@
 
       // Adding click event listeners to all elements with a class of "movie"
       $(document).on("click", ".movie", displayMovieInfo);
+
+      //Toggle urls when an image is clicked
+      $(document).on("click", ".gif", function() {
+  
+      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+          var state = $(this).attr("data-state");
+          if (state === "still") {
+                $(this).attr("src", $(this).data("animate"));
+                $(this).attr("data-state", "animate");
+          } else {
+                // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+                // Then, set the image's data-state to animate
+                $(this).attr("src", $(this).data("still"));
+                $(this).attr("data-state", "still");
+          }
+      });
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
