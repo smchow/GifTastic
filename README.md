@@ -1,2 +1,2 @@
-# GifTastic
-A app to find your favorite gifs.
+# CrystalCollector
+Crystal Collector Game
