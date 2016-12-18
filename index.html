@@ -34,12 +34,9 @@
       <input id="add-movie" type="submit" value="Add a new animal">
     </form>
 
-    <!-- Movies will get dumped Dere -->
+    <!-- Animal gifs will get added to this div -->
     <div id="movies-view"></div>
-    <!-- <div id="movies-details-title"></div>
-     <div id="movies-details-title"></div>
-     <div id="movies-details-ratings"></div> -->
-
+   
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript">
       // Initial array of movies
@@ -52,7 +49,7 @@
         //var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json";
         var apiKey   = "dc6zaTOxFJmzC";
         var giffyURL = "http://api.giphy.com/v1/gifs/search?q=" + movie +"&api_key=dc6zaTOxFJmzC&limit=10";
-        //var giffyURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + movie
+        
         // Creates AJAX call for the specific movie button being clicked
         $.ajax({
           url: giffyURL,
@@ -66,12 +63,10 @@
            //
            console.log(response);
            for(var i =0; i < response.data.length ; i++){
-              console.log(response.data[i].embed_url);
               var newDiv = $("<div>");
-              //$("#movies-view").html();
               var p = $("<p>");
               p.html("Rating: " + response.data[i].rating);
-              var img = $("<img>").attr("src", response.data[i].images.fixed_height.url)
+              var img = $("<img>").attr("src", response.data[i].images.fixed_height_still.url)
                 //image_original_url)
               newDiv.append(p);
               newDiv.append(img);
