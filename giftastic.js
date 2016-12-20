@@ -1,5 +1,5 @@
  // Initial array of movies
-      var movies = ["Cat", "Dog", "Rabbit", "Giraffe","Ferret", "goldfish" ,"turtle", "skunk", "hamster", "chicken"];
+      var animals = ["Cat", "Dog", "Rabbit", "Giraffe","Ferret", "goldfish" ,"turtle", "skunk", "hamster", "chicken"];
 
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayMovieInfo() {
@@ -46,37 +46,31 @@
         $("#buttons-view").empty();
         //event.preventDefault();
         // Loops through the array of movies
-        for (var i = 0; i < movies.length; i++) {
+        for (var i = 0; i < animals.length; i++) {
 
-          // Then dynamicaly generates buttons for each movie in the array
-          // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+          // Then dynamicaly generates buttons for each animals in the array
           var a = $("<button>");
           // Adds a class of movie to our button
-          a.addClass("movie  btn btn-primary ");
-          a.addClass("myAnim");
+          a.addClass(" btn btn-primary myAnim");
           // Added a data-attribute
-          a.attr("data-name", movies[i]);
-          // Provided the initial button text
-          a.text(movies[i]);
+          a.attr("data-name", animals[i]);
+          a.text(animals[i]);
+          
           // Added the button to the buttons-view div
           $("#buttons-view").append(a);
+      
         }
       }
 
-      // This function handles events where the add movie button is clicked
+      // This function handles events where the add animal button is clicked
       $("#add-movie").on("click", function(event) {
         event.preventDefault();
-        // This line of code will grab the input from the textbox
-        var movie = $("#movie-input").val().trim();
-
-        // The movie from the textbox is then added to our array
-        movies.push(movie);
-
-        // Calling renderButtons which handles the processing of our movie array
+        var animal = $("#movie-input").val().trim();
+        animals.push(animal);
         renderButtons();
       });
 
-      // Adding click event listeners to all elements with a class of "movie"
+      // Adding click event listeners to all elements with a class of "myAnim"
       $(document).on("click", ".myAnim", displayMovieInfo);
 
       //Toggle urls when an image is clicked

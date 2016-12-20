@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Favorite Animals</title>
   <style type="text/css" src="assets/reset.css"></style>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <style type="text/css" src="assets/style.css"> 
   </style>
 </head>
@@ -13,8 +13,9 @@
 <body>
 
   <div class="container">
-    <h1>Animal Search</h1>
-    <div class="row">
+   
+    <div class="row jumbotron">
+     <h1>Animal Search</h1>
     <!-- Rendered buttons will get dumped here  -->
     <div id="buttons-view"></div>
     </div>
@@ -28,15 +29,16 @@
   <div class="panel panel-default">
     
     <div class="panel-body"><form id="movie-form" >
-      
-      <input type="text" id="movie-input"><br>
+      <div class="form-group">
+      <input type="text" id="movie-input" class="form-control"><br>
 
       <!-- Button triggers new movie to be added -->
-      <input id="add-movie" type="submit" class="btn btn-primary" value="Add a new animal">
-    </form></div>
-  </div>
-    
-</div>
+      <input id="add-movie" type="submit" class="btn btn-primary " value="Submit">
+
+        </div>
+        </form></div>
+      </div>
+    </div>
     
 
    <div class="row">
