@@ -1,0 +1,132 @@
+body{
+	background-color: #efeee7;
+	margin: 0;
+   	padding: 0;
+   	font-family: "Georgia", "Times New Roman" ,Times,serif;
+   	font-size: 18px;
+   	line-height: 30px;
+   	color: #777777;
+}
+h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #efeee7;
+    background-color: #4aaaa5;
+    margin: 0;
+    //padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 15px;
+    width:100%;
+    float: left;
+    //margin-right: 100px;
+}
+h3{
+	font-size: 16px;
+	//padding-bottom: 5px;
+	//padding-top: 10px;
+	color: #4aaaa5;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+}
+
+p {
+    text-align: left;
+}
+
+img {
+      width: auto;
+      height: auto;
+      margin: 10px;
+      padding: 10px;
+    }
+ 
+
+.newDiv{
+    float: left;
+}
+
+.myAnim{
+    padding: 20px;
+    margin: 3 px;
+
+}
+
+button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+
+
+.crystalImage {
+      width: 15%;
+      height: auto;
+      padding: 20px;
+
+    }
+    .crystals{
+        padding:0px 20px 90px 40px;
+    }
+
+ #rule{
+    //width :600px;
+    border-style: solid;
+    border-color:#4aaaa5;
+    border-width: 5px;
+    margin: 40px;
+    padding: 40px;
+    //color:pink;
+    //background: #4aaaa5;
+ }
+.detailImg {
+	height: 180px;
+	width: 180px;
+	border-style: solid;
+	border-color:#4aaaa5;
+	border-width: 5px;
+	margin: 20px;
+}
+#rules{
+	//background-color: #666666;
+	text-align: center;
+	padding: 25px;
+	margin: 25px 25px 0px 50px;
+	border-style: solid;
+	border-color:#4aaaa5;
+	border-width: 5px 0px 5px 0px;
+	//color: #efeee7;
+	width:100%;
+	//height:450px;
+}
+ 
+.myBtn{
+	margin:20px;
+}
+#buttons-view{
+background-color:#efeee7;
+        color: #777777;
+
+}
+
+
+@media only screen and (max-width: 768px){
+    /*body {
+        background-color:green;
+    }*/
+    	
+    .myBox{
+    	background-color:#efeee7;
+    	color: #777777;
+    	}
+}
+
+
+
+
